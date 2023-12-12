@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C9C275162B283839008E3E15 /* MissionMosaicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C275152B283839008E3E15 /* MissionMosaicApp.swift */; };
-		C9C275182B283839008E3E15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C275172B283839008E3E15 /* ContentView.swift */; };
 		C9C2751A2B28383B008E3E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C275192B28383B008E3E15 /* Assets.xcassets */; };
 		C9C2751D2B28383B008E3E15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C2751C2B28383B008E3E15 /* Preview Assets.xcassets */; };
+		C9C275252B28390F008E3E15 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C275242B28390F008E3E15 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C9C275122B283839008E3E15 /* MissionMosaic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissionMosaic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C275152B283839008E3E15 /* MissionMosaicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMosaicApp.swift; sourceTree = "<group>"; };
-		C9C275172B283839008E3E15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9C275192B28383B008E3E15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9C2751C2B28383B008E3E15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9C275242B28390F008E3E15 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 		C9C275142B283839008E3E15 /* MissionMosaic */ = {
 			isa = PBXGroup;
 			children = (
+				C9C275232B2838FA008E3E15 /* Views */,
 				C9C275152B283839008E3E15 /* MissionMosaicApp.swift */,
-				C9C275172B283839008E3E15 /* ContentView.swift */,
 				C9C275192B28383B008E3E15 /* Assets.xcassets */,
 				C9C2751B2B28383B008E3E15 /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				C9C2751C2B28383B008E3E15 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9C275232B2838FA008E3E15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9C275242B28390F008E3E15 /* ListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C275182B283839008E3E15 /* ContentView.swift in Sources */,
 				C9C275162B283839008E3E15 /* MissionMosaicApp.swift in Sources */,
+				C9C275252B28390F008E3E15 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
