@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListView: View {
+    
     @State var items: [ItemModel] = [
     
         ItemModel(title: "This is the First Title", isCompleted: false),
