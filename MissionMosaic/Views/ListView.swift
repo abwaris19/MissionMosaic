@@ -21,9 +21,8 @@ struct ListView: View {
             ForEach(items) { item in
                 ListRowView(item: item)
             }.onDelete(perform: delete(indexSet:))
-                .onMove { indices, newOffset in
+                .onMove (perform: onMove(indices:newOffset:))
                     
-                }
             }
             
         .listStyle(PlainListStyle())
