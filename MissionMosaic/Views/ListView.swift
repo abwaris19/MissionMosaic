@@ -8,21 +8,17 @@
 import SwiftUI
 
 struct ListView: View {
+    @EnvironmentObject var listViewModel: ListViewModel
+  
     
-    @State var items: [ItemModel] = [
-    
-        ItemModel(title: "This is the First Title", isCompleted: false),
-        ItemModel(title: "This is the Second Title", isCompleted: true),
-        ItemModel(title: "Third", isCompleted: false)
-    ]
     var body: some View {
      
         List {
            
-            ForEach(items) { item in
+            ForEach(listViewModel.items) { item in
                 ListRowView(item: item)
-            }.onDelete(perform: delete(indexSet:))
-                .onMove (perform: onMove(indices:newOffset:))
+            }.onDelete(perform: listViewModel.delete(indexSet:))
+                .onMove (perform: listViewModel.onMove(indices:newOffset:))
                     
             }
             
@@ -31,13 +27,7 @@ struct ListView: View {
         .navigationBarItems(leading: EditButton(), trailing: NavigationLink("Add", destination: AddView()))
     }
     
-    func delete(indexSet: IndexSet) {
-        
-        items.remove(atOffsets: indexSet)
-    }
-    func onMove (indices: IndexSet, newOffset: Int) {
-        items.move(fromOffsets: indices, toOffset: newOffset)
-    }
+   
 }
 
 
@@ -49,6 +39,7 @@ struct ListView_Previews: PreviewProvider {
         NavigationView {
             ListView()
         }
+        .environmentObject(ListViewModel())
     }
 }
 
