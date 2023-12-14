@@ -20,14 +20,28 @@ struct ListView: View {
            
             ForEach(items) { item in
                 ListRowView(item: item)
+            }.onDelete(perform: delete(indexSet:))
+                .onMove { indices, newOffset in
+                    
+                }
             }
             
-        }
         .listStyle(PlainListStyle())
         .navigationTitle("Mission List 📝")
         .navigationBarItems(leading: EditButton(), trailing: NavigationLink("Add", destination: AddView()))
     }
+    
+    func delete(indexSet: IndexSet) {
+        
+        items.remove(atOffsets: indexSet)
+    }
+    func onMove (indices: IndexSet, newOffset: Int) {
+        items.move(fromOffsets: indices, toOffset: newOffset)
+    }
 }
+
+
+
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
