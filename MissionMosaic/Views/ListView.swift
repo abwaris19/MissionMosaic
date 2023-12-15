@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListView: View {
+  
     @EnvironmentObject var listViewModel: ListViewModel
   
     
@@ -29,9 +30,6 @@ struct ListView: View {
     
    
 }
-
-
-
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
