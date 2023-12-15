@@ -20,7 +20,7 @@ struct ListView: View {
                 ListRowView(item: item)
                     .onTapGesture {
                         withAnimation(.linear){
-                           
+                            listViewModel.updateItem(item: item)
                         }
                     }
             }.onDelete(perform: listViewModel.delete(indexSet:))
